@@ -30,3 +30,20 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+/* mobile 
+
+@media (max-wdith: 600px) { 
+  body { 
+    font-size: 14px: 
+    padding: 1rem;
+    }
+
+header, footer {
+  padding: 1rem; 
+  }
+
+main { 
+  padding: 1rem
+  }
+}
