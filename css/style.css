@@ -34,6 +34,26 @@ header {
   padding: 0; /* remove any default spacing */
 }
 
+/* Hero section */
+.hero {
+  background-color: #f0e68c; /* different color */
+  color: #333;
+  text-align: center;
+  padding: 6rem 2rem; /* large vertical space */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
 h1, h2 {
   margin: 0.5rem 0;
 }
