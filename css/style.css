@@ -14,10 +14,16 @@ header {
   align-items: center;
   background: #e35d02; /* darker orange ribbon */
   color: #fff;
-  padding: 0.2rem 1rem; /* very thin ribbon */
+  padding: 0.1rem 1rem; /* very thin ribbon */
   font-family: Arial, sans-serif;
-  font-size: 0.9rem; /* smaller text */
+  font-size: 0.8rem; /* smaller text */
   line-height: 1; /* reduces extra height */
+}
+
+/* elemnt inside header*/
+.header-left, .header-right {
+  margin: 0;
+  padding: 0; /* remove any default spacing */
 }
 
 h1, h2 {
