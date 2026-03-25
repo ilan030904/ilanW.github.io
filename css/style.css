@@ -4,18 +4,19 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: #f9f9f9
+  background: #F5F5DC; /* beige background */
   color: #333; 
 }
 
 header {
-  background: #24292f;
+  background: #FFA500; /* orange header */
   color: #fff;
-  padding: 2rem;
+  padding: 0.5rem 1rem; /* smaller, ribbon-like */
   text-align: center;
+  font-size: 1.2rem; /* slightly smaller text */
 }
 
-h1,h2 {
+h1, h2 {
   margin: 0.5rem 0;
 }
 
