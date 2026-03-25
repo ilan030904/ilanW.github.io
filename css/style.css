@@ -16,8 +16,16 @@ header {
   color: #fff;
   padding: 0.1rem 1rem; /* very thin ribbon */
   font-family: Arial, sans-serif;
-  font-size: 0.8rem; /* smaller text */
-  line-height: 1; /* reduces extra height */
+  font-size: 0.75rem; /* smaller than the rest of the page */
+  line-height: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-left, .header-right {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
 }
 
 /* elemnt inside header*/
