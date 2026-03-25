@@ -43,8 +43,8 @@ header {
 }
 
 .hero-content h1 {
-  font-family: 'Great Vibes', normal; /* elegant script font from Google Fonts */
-  font-size: 4rem;
+  font-family: 'Alex Brush', normal; /* elegant script font from Google Fonts */
+  font-size: 6rem;
   margin: 0;
   color: #e35d02; /* match orange header */
 }
