@@ -43,10 +43,9 @@ header {
 }
 
 .hero-content h1 {
-  font-family: 'Alex Brush', normal; /* elegant script font from Google Fonts */
-  font-size: 6rem;
+  font-size: 4rem;
   margin: 0;
-  color: #e35d02; /* match orange header */
+  color: #e35d02;
 }
 
 .hero-content p {
