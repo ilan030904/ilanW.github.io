@@ -73,11 +73,11 @@ footer {
 
 /* mobile */
 
-@media (max-width: 600px) { 
+@media (max-width: 600px) {
 
-  /* Body adjustments */
-  body { 
-    font-size: 14px; 
+  /* General body adjustments */
+  body {
+    font-size: 14px;
     padding: 1rem;
   }
 
@@ -86,8 +86,8 @@ footer {
     flex-direction: column; /* stack left/right/center items */
     align-items: center;
     text-align: center;
-    gap: 5px;
     padding: 1rem;
+    gap: 5px;
   }
 
   /* Footer adjustments */
@@ -95,51 +95,91 @@ footer {
     padding: 1rem;
   }
 
-  /* Main content adjustments */
-  main { 
+  /* Main content */
+  main {
     padding: 1rem;
   }
 
-  /* Hero section */
+  /* Hero section adjustments */
   .hero {
-    padding: 4rem 1rem;  /* smaller hero */
+    padding: 4rem 1rem;
+  }
+
+  .hero-container {
+    flex-direction: column; /* stack hero text + image */
+    align-items: center;
+    text-align: center;
   }
 
   .hero-content h1 {
-    font-size: 2.5rem;  /* smaller name */
+    font-size: 2.5rem;
   }
 
   .hero-content p {
-    font-size: 1.1rem;  /* smaller subtitle */
-  }
-
-  /* Flex containers (Experience Snapshot, About Me, etc.) */
-  div[style*="flex"] {
-    flex-direction: column !important;  /* stack items vertically */
-    align-items: center;
-  }
-
-  /* All images */
-  img {
-    max-width: 100%;   /* fit container */
-    height: auto;      /* maintain aspect ratio */
-    display: block;
-    margin: 0 auto;    /* center images */
-  }
-
-  /* Force text to be above any overlapping images */
-  .text, p, h1, h2, h3, h4 {
-    position: relative;
-    z-index: 2;
-  }
-
-  /* Hero image adjustments if used side by side */
-  .hero-container {
-    flex-direction: column;  /* stack hero text + image */
-    text-align: center;
+    font-size: 1.1rem;
   }
 
   .hero-image img {
     width: 200px;
+    margin-top: 1rem;
+  }
+
+  /* About Me section */
+  .about-me {
+    display: flex;
+    flex-direction: column;  /* stack text + image */
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+
+  .about-me img {
+    width: 180px; /* smaller image to fit section */
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* Experience Snapshot section */
+  .experience-snapshot {
+    display: flex;
+    flex-direction: column; /* stack each experience vertically */
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+
+  .experience-snapshot > div {
+    max-width: 100%; /* prevent overflow */
+    flex: unset;
+  }
+
+  .experience-snapshot img {
+    width: 200px; /* smaller images */
+    height: auto;
+    display: block;
+    margin: 0 auto 0.5rem auto;
+  }
+
+  /* Education section */
+  .education {
+    display: flex;
+    flex-direction: column; /* stack image + text */
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .education img {
+    width: 180px; /* smaller image to fit section */
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Make text always above images */
+  p, h1, h2, h3, h4 {
+    position: relative;
+    z-index: 2;
   }
 }
+
+
