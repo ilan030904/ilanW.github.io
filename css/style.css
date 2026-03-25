@@ -36,19 +36,21 @@ header {
 
 /* Hero section */
 .hero {
-  background-color: #FFC857; /* different color */
+  background-color: #FFC857; /* warm amber */
   color: #000;
   text-align: center;
-  padding: 6rem 2rem; /* large vertical space */
+  padding: 8rem 2rem;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-family: 'Brush Script MT', cursive; /* system script font */
+  font-size: 4rem;
   margin: 0;
+  color: #e35d02; /* match orange header */
 }
 
 .hero-content p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
   font-style: italic;
   line-height: 1.4;
