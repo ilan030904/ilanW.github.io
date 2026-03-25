@@ -9,11 +9,15 @@ body {
 }
 
 header {
-  background: #e35d02; /* orange header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e35d02; /* darker orange ribbon */
   color: #fff;
-  padding: 0.5rem 1rem; /* smaller, ribbon-like */
-  text-align: center;
-  font-size: 1.2rem; /* slightly smaller text */
+  padding: 0.2rem 1rem; /* very thin ribbon */
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem; /* smaller text */
+  line-height: 1; /* reduces extra height */
 }
 
 h1, h2 {
