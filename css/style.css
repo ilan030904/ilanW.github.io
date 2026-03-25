@@ -14,10 +14,10 @@ header {
   align-items: center;
   background: #e35d02; /* darker orange ribbon */
   color: #fff;
-  padding: 0.25rem 1rem; /* slightly taller ribbon */
+  padding: 0.30rem 1rem; /* slightly taller ribbon */
   font-family: Arial, sans-serif;
-  font-size: 0.85rem; /* slightly larger text */
-  line-height: 1.1; /* a little more breathing room */
+  font-size: 0.90rem; /* slightly larger text */
+  line-height: 1.4; /* a little more breathing room */
   width: 100%;
   box-sizing: border-box;
 }
