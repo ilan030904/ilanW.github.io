@@ -36,8 +36,8 @@ header {
 
 /* Hero section */
 .hero {
-  background-color: #f0e68c; /* different color */
-  color: #333;
+  background-color: #FFC857; /* different color */
+  color: #000;
   text-align: center;
   padding: 6rem 2rem; /* large vertical space */
 }
