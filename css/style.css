@@ -71,6 +71,34 @@ footer {
   margin-top: 2rem;
 }
 
+.ifc-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ifc-card {
+  flex: 1 1 200px;
+  max-width: 250px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ifc-card img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.ifc-card-link:hover .ifc-card {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
 /* MOBILE STYLING */
 @media (max-width: 600px) {
 
