@@ -99,6 +99,30 @@ footer {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
+.ifc-hero {
+  background-color: #FFC857; /* warm beige-ish background */
+  padding: 6rem 2rem;
+  color: #000;
+}
+
+.ifc-hero .hero-text {
+  text-align: left; /* aligns all text to the left */
+  max-width: 800px; /* optional: keeps text from stretching too wide */
+  margin: 0 auto; /* keeps it centered horizontally if needed */
+}
+
+.ifc-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.ifc-hero p {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.4;
+  margin: 0;
+}
+
 /* MOBILE STYLING */
 @media (max-width: 600px) {
 
