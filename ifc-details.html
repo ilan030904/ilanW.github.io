@@ -121,16 +121,24 @@
 </header>
 
 <!-- Hero Carousel Section -->
-<section class="hero-carousel"id="ifc-carousel">
+<section class="hero-carousel" id="ifc-carousel">
   <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/6f0f9eaa6d434a60f7d180259c1cdec30731d873/fianls%20graphic.png" alt="IFC Image 1">
   <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/6f0f9eaa6d434a60f7d180259c1cdec30731d873/IFC%20chronicle.png" alt="IFC Image 2">
   <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/6f0f9eaa6d434a60f7d180259c1cdec30731d873/IFC%20Chronicle%202.png" alt="IFC Image 3">
   <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/fcdbf743e31b2852b2f15f291c5f65a54c8eb163/what%20is%20IFC%201.png" alt="IFC Image 4">
-  
-  <!-- Text overlay on top of carousel -->
+
+  <!-- Text overlay -->
   <div class="hero-text-overlay">
     <h1>Interfraternity Council</h1>
     <p>VP of Communications</p>
+  </div>
+
+  <!-- Dots -->
+  <div class="carousel-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
   </div>
 </section>
 
@@ -192,6 +200,36 @@ setInterval(() => {
   current = (current + 1) % images.length;
   updateCarousel();
 }, 10000);
+</script>
+  <script>
+const carousel = document.getElementById('ifc-carousel');
+const slides = carousel.querySelectorAll('img');
+const dots = carousel.querySelectorAll('.dot');
+let current = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.display = (i === index) ? 'block' : 'none';
+    dots[i].classList.toggle('active', i === index);
+  });
+}
+
+function nextSlide() {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}
+
+// Initial display
+showSlide(current);
+setInterval(nextSlide, 10000); // change every 10 seconds
+
+// Dot click functionality
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    current = i;
+    showSlide(current);
+  });
+});
 </script>
 </body>
 </html>
