@@ -72,52 +72,100 @@ footer {
 }
 
 /* mobile */
- @media (max-width: 600px) {
+   MOBILE STYLES (max-width: 600px)
+============================= */
+@media (max-width: 600px) {
 
+  /* Body adjustments */
   body {
     font-size: 14px;
     padding: 1rem;
   }
 
+  /* Header & Footer */
+  header, footer {
+    padding: 1rem;
+    text-align: center;
+  }
+
   /* Hero section */
   .hero {
     padding: 4rem 1rem;
-    min-height: 300px; /* ensures hero stays prominent */
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
   }
 
-  .hero-image img {
+  .hero img {
     width: 180px;
+    height: auto;
     margin-top: 1rem;
   }
 
-  /* About Me section */
+  /* ----------------------
+     About Me Section
+  ---------------------- */
   .about-me {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* stack text + image */
     align-items: center;
     text-align: center;
     padding: 2rem 1rem;
-    min-height: 250px; /* gives space for image + text */
+    min-height: auto;
+    clear: both;
   }
 
-  .about-me img {
+  .about-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .about-image img {
     width: 160px;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    z-index: 1;
   }
 
-  /* Experience Snapshot section */
+  /* ----------------------
+     Education Section
+  ---------------------- */
+  .education {
+    display: flex;
+    flex-direction: column; /* stack text + image */
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    min-height: auto;
+    clear: both;
+  }
+
+  .edu-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .edu-image img {
+    width: 160px;
+    height: auto;
+    margin-bottom: 1rem;
+    z-index: 1;
+  }
+
+  /* ----------------------
+     Experience Snapshot Section
+  ---------------------- */
   .experience-snapshot {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* stack experiences vertically */
     gap: 1rem;
     padding: 2rem 1rem;
-    min-height: 400px; /* enough for 4 experiences stacked */
+    min-height: auto;
+    clear: both;
   }
 
   .experience-snapshot > div {
@@ -127,28 +175,18 @@ footer {
   }
 
   .experience-snapshot img {
-    width: 180px; 
+    width: 180px;
     height: auto;
     display: block;
     margin: 0 auto 0.5rem auto;
   }
 
-  /* Education section */
-  .education {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 1rem;
-    min-height: 250px; /* allows image + text comfortably */
+  /* Ensure text appears above images everywhere */
+  p, h1, h2, h3, h4 {
+    position: relative;
+    z-index: 2;
   }
-
-  .education img {
-    width: 160px;
-    height: auto;
-    margin-bottom: 0.5rem;
-  }
-
+}
   /* Ensure text stays on top */
   p, h1, h2, h3, h4 {
     position: relative;
