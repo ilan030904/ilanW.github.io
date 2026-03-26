@@ -71,116 +71,81 @@ footer {
   margin-top: 2rem;
 }
 
-/* mobile */
-   MOBILE STYLES (max-width: 600px)
-============================= */
-@media (max-width: 600px) {
+/* Mobile styles */
+@media (max-width: 768px) {
 
-  /* Body adjustments */
+  /* Reduce font sizes overall */
   body {
     font-size: 14px;
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
-  /* Header & Footer */
-  header, footer {
-    padding: 1rem;
+  /* Header adjustments */
+  header {
+    flex-direction: column;
     text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 
-  /* Hero section */
+  .header-left,
+  .header-center,
+  .header-right {
+    margin: 0.25rem 0;
+  }
+
+  /* Hero section adjustments */
   .hero {
     padding: 4rem 1rem;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
   }
 
   .hero-content h1 {
-    font-size: 2.5rem; /* smaller for mobile */
-    margin: 0.5rem 0;
+    font-size: 3rem;
   }
 
   .hero-content p {
     font-size: 1.2rem;
-    margin-top: 0.5rem;
   }
 
-  /* ----------------------
-     About Me Section
-     Hide the image
-  ---------------------- */
-  .about-me {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 1rem;
-    clear: both;
+  /* Main sections: About Me & Education */
+  main section {
+    flex-direction: column !important; /* stack text and images */
+    max-height: none !important;
+    padding: 1rem;
   }
 
-  .about-image {
-    display: none; /* hide image on mobile */
+  /* Hide About Me and Education images */
+  main section img {
+    display: none;
   }
 
-  .about-text {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  /* ----------------------
-     Education Section
-     Hide the image
-  ---------------------- */
-  .education {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 1rem;
-    clear: both;
-  }
-
-  .edu-image {
-    display: none; /* hide image on mobile */
-  }
-
-  .edu-text {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  /* ----------------------
-     Experience Snapshot Section
-  ---------------------- */
+  /* Experience Snapshot adjustments */
   .experience-snapshot {
-    display: flex;
-    flex-direction: column; /* stack experiences vertically */
-    gap: 1rem;
-    padding: 2rem 1rem;
-    clear: both;
+    flex-direction: column;
+    gap: 15px;
   }
 
-  .experience-snapshot > div {
+  .experience-snapshot div {
     max-width: 100%;
-    flex: unset;
-    padding: 0.5rem 0;
-    text-align: center;
+    flex: 1 1 100%;
   }
 
-  .experience-snapshot img {
-    width: 180px;
-    height: auto;
-    display: block;
-    margin: 0 auto 0.5rem auto;
+  /* Skills & Expertise */
+  .skills {
+    flex-direction: column;
+    gap: 20px;
   }
 
-  /* Ensure text appears above images everywhere */
-  p, h1, h2, h3, h4 {
+  .skills ul {
+    padding-left: 20px;
+  }
+
+  /* Footer adjustments */
+  footer {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+}
     position: relative;
     z-index: 2;
   }
