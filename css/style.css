@@ -66,11 +66,12 @@ header {
 }
 
 .hero-carousel img {
-  min-width: 100%; /* each image takes full width */
-  height: 625px;
-  object-fit: cover;
+  min-width: 100%;      /* full width */
+  height: 625px;        /* same height as carousel */
+  object-fit: contain;   /* fit entire image inside the space */
+  background-color: #000; /* black bars for empty space */
   flex-shrink: 0;
-  transition: transform 1s ease-in-out; /* smooth slide */
+  transition: transform 1s ease-in-out;
 }
 
 /* Hero text overlay - LEFT aligned */
