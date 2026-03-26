@@ -154,5 +154,23 @@
   <p>Connect with me on <a href="https://www.linkedin.com/in/ilan-weiner">LinkedIn</a></p>
 </footer>
 
+  <script>
+  const carousel = document.getElementById('ifc-carousel');
+  const images = carousel.querySelectorAll('img');
+  let current = 0;
+
+  function showNextImage() {
+    images.forEach((img, index) => {
+      img.style.transform = `translateX(-${current * 100}%)`;
+    });
+    current = (current + 1) % images.length;
+  }
+
+  // initial position
+  images.forEach((img, index) => img.style.transform = 'translateX(0)');
+  
+  // change image every 10 seconds
+  setInterval(showNextImage, 10000);
+</script>
 </body>
 </html>
