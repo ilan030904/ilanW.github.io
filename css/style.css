@@ -72,26 +72,29 @@ footer {
 }
 
 /* Mobile styles */
-@media (max-width: 768px) {
+/* MOBILE STYLING */
+@media (max-width: 600px) {
 
-  /* Reduce font sizes overall */
+  /* Reduce body font size for mobile */
   body {
     font-size: 14px;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   /* Header adjustments */
   header {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
     padding: 0.5rem 1rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem; /* slightly smaller on mobile */
+    text-align: center;
   }
 
   .header-left,
   .header-center,
   .header-right {
-    margin: 0.25rem 0;
+    margin: 0.2rem 0;
+    padding: 0;
   }
 
   /* Hero section adjustments */
@@ -100,53 +103,42 @@ footer {
   }
 
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* smaller heading */
   }
 
   .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.3;
   }
 
-  /* Main sections: About Me & Education */
+  /* Main sections spacing */
   main section {
-    flex-direction: column !important; /* stack text and images */
+    flex-direction: column !important; /* stack items vertically */
     max-height: none !important;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
+    gap: 10px !important;
   }
 
-  /* Hide About Me and Education images */
-  main section img {
-    display: none;
+  main section div {
+    flex: 1 1 100% !important; /* full width for text */
+    text-align: left !important;
   }
 
-  /* Experience Snapshot adjustments */
-  .experience-snapshot {
-    flex-direction: column;
-    gap: 15px;
+  /* Hide images for About Me and Education on mobile */
+  .mobile-hide {
+    display: none !important;
   }
 
-  .experience-snapshot div {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
-
-  /* Skills & Expertise */
-  .skills {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .skills ul {
-    padding-left: 20px;
+  /* Skills & Experience sections adjustments */
+  .hero,
+  main section,
+  footer {
+    width: 100%;
   }
 
   /* Footer adjustments */
   footer {
     font-size: 0.8rem;
     padding: 0.5rem;
-  }
-}
-    position: relative;
-    z-index: 2;
   }
 }
