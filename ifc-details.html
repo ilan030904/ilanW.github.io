@@ -6,14 +6,12 @@
   <title>IFC - VP of Communications</title>
   <link rel="stylesheet" href="css/style.css">  
   <style>
-    /* ===== IFC Page CSS ===== */
-
-    /* Header ribbon */
+    /* Header ribbon - same as main page */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #e35d02;
+      background: #e35d02; /* orange ribbon */
       color: #fff;
       padding: 0.3rem 1rem;
       font-family: Arial, sans-serif;
@@ -28,24 +26,31 @@
       white-space: nowrap;
     }
 
-    /* Hero Carousel */
+    /* Hero Carousel Section */
     .hero-carousel {
       position: relative;
       overflow: hidden;
       width: 100%;
-      height: 625px; /* bigger to fit vertical images */
-      background-color: #FFC857;
+      height: 625px; /* slightly taller to fit vertical images */
+      background-color: #FFC857; /* placeholder color */
     }
     .hero-carousel img {
-      min-width: 100%;
-      height: 625px;
-      object-fit: contain; /* show full image */
-      background-color: #000; /* black bars if necessary */
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* fit entire image, keep aspect ratio */
       flex-shrink: 0;
-      transition: transform 1s ease-in-out;
+      transition: opacity 1s ease-in-out;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    .hero-carousel img.active {
+      opacity: 1;
+      position: relative;
     }
 
-    /* Hero text overlay - left */
+    /* Hero text overlay - LEFT aligned */
     .hero-text-overlay {
       position: absolute;
       top: 5%;
@@ -53,8 +58,9 @@
       transform: none;
       color: #fff;
       text-align: left;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
       max-width: 600px;
+      z-index: 10;
     }
     .hero-text-overlay h1 {
       font-size: 3rem;
@@ -66,7 +72,7 @@
       margin: 0.5rem 0 0 0;
     }
 
-    /* Dots navigation */
+    /* Carousel dots */
     .carousel-dots {
       position: absolute;
       bottom: 10px;
@@ -88,9 +94,9 @@
       background-color: #fff;
     }
 
-    /* Favorites section */
+    /* Favorites section below hero */
     .favorites {
-      background-color: #F5F5DC;
+      background-color: #F5F5DC; /* beige */
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
@@ -110,23 +116,34 @@
       margin-top: 0.5rem;
     }
 
-    /* Footer centered */
+    /* Footer */
     footer {
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      background: #e35d02;
+      background-color: #e35d02;
       color: #fff;
     }
 
-    /* Mobile */
+    /* Mobile responsiveness */
     @media (max-width: 768px) {
-      .hero-text-overlay h1 { font-size: 2rem; }
-      .hero-text-overlay p { font-size: 1.2rem; }
-      .hero-carousel { height: 400px; }
-      .hero-carousel img { height: 400px; }
-      .favorites { flex-direction: column; align-items: center; }
-      .carousel-dots span { width: 10px; height: 10px; }
+      .hero-text-overlay h1 {
+        font-size: 2rem;
+      }
+      .hero-text-overlay p {
+        font-size: 1.2rem;
+      }
+      .hero-carousel {
+        height: 400px;
+      }
+      .favorites {
+        flex-direction: column;
+        align-items: center;
+      }
+      .carousel-dots span {
+        width: 10px;
+        height: 10px;
+      }
     }
   </style>
 </head>
@@ -138,12 +155,12 @@
   <div class="header-right">Ilan Weiner | Marketing Student</div>
 </header>
 
-<!-- Hero Carousel -->
-<section class="hero-carousel" id="hero-carousel">
-  <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/6f0f9eaa6d434a60f7d180259c1cdec30731d873/fianls%20graphic.png" alt="IFC Image 1">
-  <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/6f0f9eaa6d434a60f7d180259c1cdec30731d873/IFC%20chronicle.png" alt="IFC Image 2">
-  <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/6f0f9eaa6d434a60f7d180259c1cdec30731d873/IFC%20Chronicle%202.png" alt="IFC Image 3">
-  <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/fcdbf743e31b2852b2f15f291c5f65a54c8eb163/what%20is%20IFC%201.png" alt="IFC Image 4">
+<!-- Hero Carousel Section -->
+<section class="hero-carousel">
+  <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/6f0f9eaa6d434a60f7d180259c1cdec30731d873/IFC%20chronicle.png" alt="IFC Chronicle 1" class="active">
+  <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/6f0f9eaa6d434a60f7d180259c1cdec30731d873/IFC%20Chronicle%202.png" alt="IFC Chronicle 2">
+  <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/fcdbf743e31b2852b2f15f291c5f65a54c8eb163/what%20is%20IFC%201.png" alt="What is IFC 1">
+  <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/6f0f9eaa6d434a60f7d180259c1cdec30731d873/fianls%20graphic.png" alt="Final Graphic">
 
   <!-- Hero text overlay -->
   <div class="hero-text-overlay">
@@ -151,8 +168,13 @@
     <p>VP of Communications</p>
   </div>
 
-  <!-- Dots -->
-  <div class="carousel-dots" id="carousel-dots"></div>
+  <!-- Dots navigation -->
+  <div class="carousel-dots">
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </section>
 
 <!-- Favorites Section -->
@@ -172,38 +194,26 @@
 </section>
 
 <footer>
- <center><p>Connect with me on <a href="https://www.linkedin.com/in/ilan-weiner">LinkedIn</a></p></center>
+  <p>Connect with me on <a href="https://www.linkedin.com/in/ilan-weiner" style="color:white;">LinkedIn</a></p>
 </footer>
 
 <script>
   // Carousel auto-slide
-  const carousel = document.getElementById('hero-carousel');
-  const images = carousel.querySelectorAll('img');
-  const dotsContainer = document.getElementById('carousel-dots');
+  const slides = document.querySelectorAll('.hero-carousel img');
+  const dots = document.querySelectorAll('.carousel-dots span');
   let currentIndex = 0;
 
-  // Create dots
-  images.forEach((img, index) => {
-    const dot = document.createElement('span');
-    if(index === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => {
-      currentIndex = index;
-      updateCarousel();
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
     });
-    dotsContainer.appendChild(dot);
-  });
-
-  function updateCarousel() {
-    carousel.scrollTo({ left: carousel.offsetWidth * currentIndex, behavior: 'smooth' });
-    const dots = dotsContainer.querySelectorAll('span');
-    dots.forEach(d => d.classList.remove('active'));
-    dots[currentIndex].classList.add('active');
   }
 
   setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateCarousel();
-  }, 10000); // 10 seconds
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }, 10000); // change every 10 seconds
 </script>
 
 </body>
