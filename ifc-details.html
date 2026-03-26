@@ -154,23 +154,44 @@
   <p>Connect with me on <a href="https://www.linkedin.com/in/ilan-weiner">LinkedIn</a></p>
 </footer>
 
-  <script>
-  const carousel = document.getElementById('ifc-carousel');
-  const images = carousel.querySelectorAll('img');
-  let current = 0;
+<script>
+const carousel = document.querySelector('.hero-carousel');
+const images = carousel.querySelectorAll('img');
 
-  function showNextImage() {
-    images.forEach((img, index) => {
-      img.style.transform = `translateX(-${current * 100}%)`;
-    });
-    current = (current + 1) % images.length;
-  }
+// Create dots
+const dotsContainer = document.createElement('div');
+dotsContainer.className = 'carousel-dots';
+images.forEach((_, idx) => {
+  const dot = document.createElement('span');
+  if(idx === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => {
+    current = idx;
+    updateCarousel();
+  });
+  dotsContainer.appendChild(dot);
+});
+carousel.appendChild(dotsContainer);
 
-  // initial position
-  images.forEach((img, index) => img.style.transform = 'translateX(0)');
-  
-  // change image every 10 seconds
-  setInterval(showNextImage, 10000);
+let current = 0;
+
+function updateCarousel() {
+  images.forEach((img, index) => {
+    img.style.transform = `translateX(-${current * 100}%)`;
+  });
+  // update dots
+  const dots = dotsContainer.querySelectorAll('span');
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[current].classList.add('active');
+}
+
+// Initial position
+updateCarousel();
+
+// Auto-slide every 10 seconds
+setInterval(() => {
+  current = (current + 1) % images.length;
+  updateCarousel();
+}, 10000);
 </script>
 </body>
 </html>
