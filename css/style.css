@@ -98,23 +98,31 @@ footer {
     text-align: center;
   }
 
-  .hero img {
-    width: 180px;
-    height: auto;
-    margin-top: 1rem;
+  .hero-content h1 {
+    font-size: 2.5rem; /* smaller for mobile */
+    margin: 0.5rem 0;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
   }
 
   /* ----------------------
      About Me Section
+     Hide the image
   ---------------------- */
   .about-me {
     display: flex;
-    flex-direction: column; /* stack text + image */
+    flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 2rem 1rem;
-    min-height: auto;
     clear: both;
+  }
+
+  .about-image {
+    display: none; /* hide image on mobile */
   }
 
   .about-text {
@@ -123,37 +131,27 @@ footer {
     margin-bottom: 1rem;
   }
 
-  .about-image img {
-    width: 160px;
-    height: auto;
-    margin-bottom: 1rem;
-    z-index: 1;
-  }
-
   /* ----------------------
      Education Section
+     Hide the image
   ---------------------- */
   .education {
     display: flex;
-    flex-direction: column; /* stack text + image */
+    flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 2rem 1rem;
-    min-height: auto;
     clear: both;
+  }
+
+  .edu-image {
+    display: none; /* hide image on mobile */
   }
 
   .edu-text {
     width: 100%;
     text-align: center;
     margin-bottom: 1rem;
-  }
-
-  .edu-image img {
-    width: 160px;
-    height: auto;
-    margin-bottom: 1rem;
-    z-index: 1;
   }
 
   /* ----------------------
@@ -164,7 +162,6 @@ footer {
     flex-direction: column; /* stack experiences vertically */
     gap: 1rem;
     padding: 2rem 1rem;
-    min-height: auto;
     clear: both;
   }
 
@@ -172,6 +169,7 @@ footer {
     max-width: 100%;
     flex: unset;
     padding: 0.5rem 0;
+    text-align: center;
   }
 
   .experience-snapshot img {
@@ -182,12 +180,6 @@ footer {
   }
 
   /* Ensure text appears above images everywhere */
-  p, h1, h2, h3, h4 {
-    position: relative;
-    z-index: 2;
-  }
-}
-  /* Ensure text stays on top */
   p, h1, h2, h3, h4 {
     position: relative;
     z-index: 2;
