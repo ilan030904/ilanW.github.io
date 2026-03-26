@@ -32,7 +32,6 @@
       display: flex;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
-      gap: 0;
       width: 100%;
       height: 500px; /* adjust height */
       background-color: #FFC857; /* placeholder color */
@@ -46,15 +45,16 @@
       scroll-snap-align: start;
     }
 
-    /* Text overlay on hero carousel */
+    /* Hero text overlay - LEFT aligned */
     .hero-text-overlay {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 5%;           /* top of carousel */
+      left: 5%;          /* slightly away from left edge */
+      transform: none;   /* no horizontal centering */
       color: #fff;
-      text-align: center;
+      text-align: left;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      max-width: 600px;  /* optional: limit width */
     }
 
     .hero-text-overlay h1 {
@@ -116,7 +116,7 @@
 
 <header>
   <div class="header-left">Personal Portfolio</div>
-  <div class="header-center"> Ambitious | Strategic | Problem Solver </div>
+  <div class="header-center">Ambitious | Strategic | Problem Solver</div>
   <div class="header-right">Ilan Weiner | Marketing Student</div>
 </header>
 
@@ -125,8 +125,8 @@
   <img src="https://via.placeholder.com/1200x500?text=IFC+Image+1" alt="IFC Image 1">
   <img src="https://via.placeholder.com/1200x500?text=IFC+Image+2" alt="IFC Image 2">
   <img src="https://via.placeholder.com/1200x500?text=IFC+Image+3" alt="IFC Image 3">
-  
-  <!-- Text overlay on top of carousel -->
+
+  <!-- Text overlay LEFT aligned -->
   <div class="hero-text-overlay">
     <h1>Interfraternity Council</h1>
     <p>VP of Communications</p>
