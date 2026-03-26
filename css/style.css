@@ -71,7 +71,6 @@ footer {
   margin-top: 2rem;
 }
 
-/* Mobile styles */
 /* MOBILE STYLING */
 @media (max-width: 600px) {
 
@@ -86,7 +85,7 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 0.5rem 1rem;
-    font-size: 0.7rem; /* slightly smaller on mobile */
+    font-size: 0.7rem;
     text-align: center;
   }
 
@@ -103,7 +102,7 @@ footer {
   }
 
   .hero-content h1 {
-    font-size: 2.5rem; /* smaller heading */
+    font-size: 2.5rem;
   }
 
   .hero-content p {
@@ -111,29 +110,22 @@ footer {
     line-height: 1.3;
   }
 
-  /* Main sections spacing */
+  /* Stack main sections vertically */
   main section {
-    flex-direction: column !important; /* stack items vertically */
+    flex-direction: column !important;
     max-height: none !important;
     padding: 1rem 0.5rem;
     gap: 10px !important;
   }
 
   main section div {
-    flex: 1 1 100% !important; /* full width for text */
+    flex: 1 1 100% !important;
     text-align: left !important;
   }
 
-  /* Hide images for About Me and Education on mobile */
-  .mobile-hide {
+  /* ONLY hide About Me and Education images on mobile */
+  img.mobile-hide {
     display: none !important;
-  }
-
-  /* Skills & Experience sections adjustments */
-  .hero,
-  main section,
-  footer {
-    width: 100%;
   }
 
   /* Footer adjustments */
