@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IFC - VP of Communications</title>
+  <link rel="stylesheet" href="css/style.css">  
+  <style>
+    /* Header ribbon - same as main page */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #e35d02; /* orange ribbon */
+      color: #fff;
+      padding: 0.3rem 1rem; /* thin ribbon */
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem; 
+      line-height: 1;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .header-left, .header-right, .header-center {
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+    }
+
+    /* Hero Carousel Section */
+    .hero-carousel {
+      position: relative;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 0;
+      width: 100%;
+      height: 500px; /* adjust height */
+      background-color: #FFC857; /* placeholder color */
+    }
+
+    .hero-carousel img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+    }
+
+    /* Text overlay on hero carousel */
+    .hero-text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-text-overlay h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .hero-text-overlay p {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin: 0.5rem 0 0 0;
+    }
+
+    /* Favorites section below hero */
+    .favorites {
+      background-color: #F5F5DC; /* beige */
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .favorite-card {
+      text-align: center;
+      max-width: 300px;
+    }
+
+    .favorite-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .favorite-card p {
+      margin-top: 0.5rem;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .hero-text-overlay h1 {
+        font-size: 2rem;
+      }
+      .hero-text-overlay p {
+        font-size: 1.2rem;
+      }
+      .hero-carousel {
+        height: 300px;
+      }
+      .favorites {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">Personal Portfolio</div>
+  <div class="header-center"> Ambitious | Strategic | Problem Solver </div>
+  <div class="header-right">Ilan Weiner | Marketing Student</div>
+</header>
+
+<!-- Hero Carousel Section -->
+<section class="hero-carousel">
+  <img src="https://via.placeholder.com/1200x500?text=IFC+Image+1" alt="IFC Image 1">
+  <img src="https://via.placeholder.com/1200x500?text=IFC+Image+2" alt="IFC Image 2">
+  <img src="https://via.placeholder.com/1200x500?text=IFC+Image+3" alt="IFC Image 3">
+  
+  <!-- Text overlay on top of carousel -->
+  <div class="hero-text-overlay">
+    <h1>Interfraternity Council</h1>
+    <p>VP of Communications</p>
+  </div>
+</section>
+
+<!-- Favorites Section -->
+<section class="favorites">
+  <div class="favorite-card">
+    <img src="https://via.placeholder.com/300x200?text=Favorite+1" alt="Favorite 1">
+    <p>Description for favorite image 1.</p>
+  </div>
+  <div class="favorite-card">
+    <img src="https://via.placeholder.com/300x200?text=Favorite+2" alt="Favorite 2">
+    <p>Description for favorite image 2.</p>
+  </div>
+  <div class="favorite-card">
+    <img src="https://via.placeholder.com/300x200?text=Favorite+3" alt="Favorite 3">
+    <p>Description for favorite image 3.</p>
+  </div>
+</section>
+
+<footer>
+  <p>Connect with me on <a href="https://www.linkedin.com/in/ilan-weiner">LinkedIn</a></p>
+</footer>
+
+</body>
+</html>
