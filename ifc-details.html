@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"> 
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IFC - VP of Communications</title>
-  <link rel="stylesheet" href="css/style.css">  
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -15,14 +15,13 @@
 </header>
 
 <section class="hero-carousel">
-
   <!-- Left side vertical text -->
   <div class="hero-side-text hero-left-text">
     Interfraternity Council<br>
     VP of Communications
   </div>
 
-  <!-- Carousel images in the center -->
+  <!-- Carousel images in center -->
   <div class="hero-carousel-images">
     <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/6f0f9eaa6d434a60f7d180259c1cdec30731d873/IFC%20chronicle.png" alt="IFC Chronicle 1" class="active">
     <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/6f0f9eaa6d434a60f7d180259c1cdec30731d873/IFC%20Chronicle%202.png" alt="IFC Chronicle 2">
@@ -44,7 +43,6 @@
   </div>
 </section>
 
-<!-- Favorites Section -->
 <section class="favorites">
   <div class="favorite-card">
     <img src="https://via.placeholder.com/300x200?text=Favorite+1" alt="Favorite 1">
@@ -64,19 +62,15 @@
   <p>Connect with me on <a href="https://www.linkedin.com/in/ilan-weiner" style="color:white;">LinkedIn</a></p>
 </footer>
 
-<!-- Carousel JS -->
 <script>
 const images = document.querySelectorAll(".hero-carousel-images img");
 const dots = document.querySelectorAll(".carousel-dots span");
 let currentIndex = 0;
 
+// Show image and active dot
 function showImage(index) {
-  images.forEach((img, i) => {
-    img.classList.toggle("active", i === index);
-  });
-  dots.forEach((dot, i) => {
-    dot.classList.toggle("active", i === index);
-  });
+  images.forEach((img, i) => img.classList.toggle("active", i === index));
+  dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
   currentIndex = index;
 }
 
@@ -87,11 +81,7 @@ setInterval(() => {
 }, 4000);
 
 // Clickable dots
-dots.forEach((dot, i) => {
-  dot.addEventListener("click", () => {
-    showImage(i);
-  });
-});
+dots.forEach((dot, i) => dot.addEventListener("click", () => showImage(i)));
 </script>
 
 </body>
