@@ -61,12 +61,13 @@ header {
   overflow: hidden;
 }
 
-/* SIDE TEXT */
-.hero-left-text, .hero-right-text {
-  width: 260px;
-  color: #fff;
+/* LEFT SIDE */
+.hero-left-text {
+  writing-mode: vertical-lr;  /* vertical top-to-bottom */
+  transform: none;            /* remove sideways rotation */
   font-weight: 900;
   font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: #fff;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
   padding: 1.5rem;
   display: flex;
@@ -74,12 +75,29 @@ header {
   justify-content: center;
   position: relative;
   z-index: 5;
+  text-align: center;
+}
+
+/* RIGHT SIDE */
+.hero-right-text {
+  writing-mode: vertical-lr;  /* vertical top-to-bottom */
+  transform: none;            /* remove rotation */
+  font-weight: 900;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  text-align: center;
 }
 
 /* Vertical styling */
 .hero-left-text {
   writing-mode: vertical-rl;
-  transform: rotate(180deg);
 }
 
 .hero-right-text {
@@ -93,11 +111,11 @@ header {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to right, rgba(0,0,0,0.6), transparent);
+  background: linear-gradient(to right, rgba(0,0,0,0.6));
 }
 
 .hero-right-text::before {
-  background: linear-gradient(to left, rgba(0,0,0,0.6), transparent);
+  background: linear-gradient(to left, rgba(0,0,0,0.6));
 }
 
 /* CAROUSEL IMAGES */
