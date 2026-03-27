@@ -27,7 +27,7 @@ header {
   white-space: nowrap;
 }
 
-/* ================= MAIN HERO (HOME PAGE) ================= */
+/* ================= MAIN PAGE HERO ================= */
 .hero {
   background-color: #FFC857;
   color: #000;
@@ -48,41 +48,48 @@ header {
   font-style: italic;
 }
 
-/* ================= IFC PAGE HERO CAROUSEL ================= */
+/* ================= IFC HERO CAROUSEL ================= */
 .hero-carousel {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 625px;
-  background-color: #FFC857; /* matches main hero */
+  background-color: #FFC857;
   overflow: hidden;
 }
 
-/* Left & right vertical text */
-.hero-left-text, .hero-right-text {
-  width: 220px;  /* equal width */
+/* Left + right side text */
+.hero-side-text {
+  width: 180px; /* same width for both sides */
   color: #fff;
   font-weight: 900;
   font-size: clamp(2rem, 3vw, 3rem);
-  line-height: 1.2;
-  writing-mode: vertical-rl; /* vertical going down */
-  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0.5rem;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-  z-index: 10;
+  line-height: 1.2;
+  text-align: center;
+  writing-mode: vertical-lr; /* top to bottom */
+  white-space: nowrap;
 }
 
-/* Carousel images centered */
+.hero-left-text {
+  margin-right: 20px;
+}
+
+.hero-right-text {
+  margin-left: 20px;
+}
+
+/* Carousel images */
 .hero-carousel-images {
   flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100%;
   position: relative;
 }
@@ -92,15 +99,17 @@ header {
   max-height: 100%;
   object-fit: contain;
   opacity: 0;
-  position: absolute; /* keep all images stacked */
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* center perfectly */
+  transform: translate(-50%, -50%);
   transition: opacity 1s ease-in-out;
+  z-index: 1;
 }
 
 .hero-carousel-images img.active {
-  opacity: 1; /* fade in over top */
+  opacity: 1;
+  z-index: 2;
 }
 
 /* Carousel dots */
@@ -111,13 +120,13 @@ header {
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
-  z-index: 20;
+  z-index: 10;
 }
 
 .carousel-dots span {
   width: 12px;
   height: 12px;
-  background: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.5);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -127,7 +136,7 @@ header {
   transform: scale(1.3);
 }
 
-/* ================= FAVORITES ================= */
+/* Favorites section */
 .favorites {
   background-color: #F5F5DC;
   display: flex;
@@ -151,7 +160,7 @@ header {
   margin-top: 0.5rem;
 }
 
-/* ================= FOOTER ================= */
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
@@ -160,18 +169,21 @@ footer {
   color: #fff;
 }
 
-/* ================= MOBILE RESPONSIVENESS ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .hero-carousel {
     height: 400px;
   }
-  .hero-left-text, .hero-right-text {
+
+  .hero-side-text {
     display: none;
   }
+
   .favorites {
     flex-direction: column;
     align-items: center;
   }
+
   .carousel-dots span {
     width: 10px;
     height: 10px;
@@ -183,20 +195,25 @@ footer {
     font-size: 14px;
     padding: 1rem;
   }
+
   header {
     flex-direction: column;
     text-align: center;
     font-size: 0.7rem;
   }
+
   .hero {
     padding: 4rem 1rem;
   }
+
   .hero-content h1 {
     font-size: 2.5rem;
   }
+
   .hero-content p {
     font-size: 1rem;
   }
+
   footer {
     font-size: 0.8rem;
   }
