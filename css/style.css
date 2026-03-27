@@ -60,22 +60,23 @@ header {
   overflow: hidden;
 }
 
-/* Left + right side text */
+/* Left + right vertical text */
 .hero-side-text {
-  width: 180px; /* same width for both sides */
+  width: 180px;             /* same width for left & right */
   color: #fff;
   font-weight: 900;
   font-size: clamp(2rem, 3vw, 3rem);
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
   display: flex;
+  flex-direction: column;   /* stack letters vertically */
   justify-content: center;
   align-items: center;
   line-height: 1.2;
   text-align: center;
-  writing-mode: vertical-lr; /* top to bottom */
-  white-space: nowrap;
+  white-space: normal;      /* allow line breaks */
 }
 
+/* spacing from carousel */
 .hero-left-text {
   margin-right: 20px;
 }
