@@ -78,11 +78,11 @@ header {
 
 /* spacing from carousel */
 .hero-left-text {
-  margin-right: 10px;
+  margin-right: 0px;
 }
 
 .hero-right-text {
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 /* Carousel images */
