@@ -76,13 +76,14 @@ header {
   white-space: normal;      /* allow line breaks */
 }
 
-/* spacing from carousel */
 .hero-left-text {
-  margin-right: 0px;
+  position: absolute;
+  left: 0; /* hugs the left edge */
 }
 
 .hero-right-text {
-  margin-left: 0px;
+  position: absolute;
+  right: 0; /* hugs the right edge */
 }
 
 /* Carousel images */
