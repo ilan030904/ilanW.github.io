@@ -13,10 +13,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #e35d02; /* orange ribbon */
+  background: #e35d02; 
   color: #fff;
   padding: 0.3rem 1rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem; 
   width: 100%;
   box-sizing: border-box;
 }
@@ -27,61 +27,41 @@ header {
   white-space: nowrap;
 }
 
-/* ================= IFC HERO CAROUSEL ================= */
+/* ================= IFC HERO ================= */
 .hero-carousel {
-  position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 625px;
-  background-color: #EEDFCC; /* professional beige-y color */
+  background-color: #FFC857; /* professional hero color */
+  position: relative;
   overflow: hidden;
 }
 
-/* LEFT SIDE - vertical text */
-.hero-left-text {
-  writing-mode: vertical-rl; /* vertical text going down */
+/* LEFT AND RIGHT TEXT PANELS */
+.hero-side-text {
   width: 200px; /* same width for both sides */
-  height: 90%; /* matches right panel height */
   color: #fff;
-  font-weight: 700;
-  font-size: clamp(2rem, 3vw, 2.5rem); /* reduced for fit */
-  text-shadow: 1.5px 1.5px 5px rgba(0,0,0,0.7);
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: rgba(35, 70, 120, 0.7); /* professional muted blue */
-  border-radius: 5px;
-  flex-shrink: 0;
-}
-
-/* RIGHT SIDE - vertical text */
-.hero-right-text {
-  writing-mode: vertical-rl;
-  width: 200px; /* same as left */
-  height: 90%;
-  color: #fff;
-  font-weight: 700;
+  font-weight: 900;
   font-size: clamp(2rem, 3vw, 2.5rem);
-  text-shadow: 1.5px 1.5px 5px rgba(0,0,0,0.7);
-  padding: 1rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  background-color: rgba(35, 70, 120, 0.7);
-  border-radius: 5px;
-  flex-shrink: 0;
+  line-height: 1.2;
 }
 
-/* Carousel images in the center */
+.hero-left-text, .hero-right-text {
+  writing-mode: vertical-rl; /* vertical text down */
+}
+
+/* CAROUSEL IMAGE CONTAINER */
 .hero-carousel-images {
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center; /* centers images horizontally */
+  justify-content: center; /* center images horizontally */
   height: 100%;
   position: relative;
 }
@@ -89,7 +69,7 @@ header {
 .hero-carousel-images img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* ensures full image is visible */
+  object-fit: contain;
   opacity: 0;
   position: absolute;
   transition: opacity 1s ease-in-out;
@@ -100,7 +80,7 @@ header {
   position: relative;
 }
 
-/* DOTS NAVIGATION */
+/* CAROUSEL DOTS */
 .carousel-dots {
   position: absolute;
   bottom: 15px;
@@ -108,7 +88,7 @@ header {
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
-  z-index: 999;
+  z-index: 10;
 }
 
 .carousel-dots span {
@@ -120,7 +100,7 @@ header {
 }
 
 .carousel-dots .active {
-  background: #fff;
+  background-color: #fff;
   transform: scale(1.3);
 }
 
@@ -144,11 +124,17 @@ header {
   border-radius: 10px;
 }
 
+.favorite-card p {
+  margin-top: 0.5rem;
+}
+
 /* ================= FOOTER ================= */
 footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+  background-color: #e35d02;
+  color: #fff;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */
@@ -156,20 +142,16 @@ footer {
   .hero-carousel {
     height: 450px;
   }
-
-  .hero-left-text,
-  .hero-right-text {
-    display: none; /* hide side text on mobile */
+  .hero-side-text {
+    display: none; /* hide vertical text on mobile */
   }
-
-  .favorites {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .carousel-dots span {
     width: 10px;
     height: 10px;
+  }
+  .favorites {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -178,25 +160,18 @@ footer {
     font-size: 14px;
     padding: 1rem;
   }
-
   header {
     flex-direction: column;
     text-align: center;
     font-size: 0.7rem;
   }
-
-  .hero {
-    padding: 4rem 1rem;
+  .hero-carousel {
+    height: 400px;
   }
-
-  .hero-content h1 {
-    font-size: 2.5rem;
+  .favorites {
+    flex-direction: column;
+    align-items: center;
   }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
   footer {
     font-size: 0.8rem;
   }
