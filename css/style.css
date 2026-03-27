@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: #F5F5DC;
+  background: #F5F5DC; /* beige background */
   color: #333;
 }
 
@@ -13,7 +13,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #e35d02;
+  background: #e35d02; /* orange ribbon */
   color: #fff;
   padding: 0.3rem 1rem;
   font-size: 0.9rem;
@@ -27,73 +27,53 @@ header {
   white-space: nowrap;
 }
 
-/* ================= MAIN HERO (HOME PAGE) ================= */
-.hero {
-  background-color: #FFC857;
-  color: #000;
-  text-align: center;
-  padding: 8rem 2rem;
-}
-
-.hero-content h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 4rem;
-  margin: 0;
-  color: #e35d02;
-}
-
-.hero-content p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  font-style: italic;
-}
-
-/* ================= IFC PAGE ================= */
-
-/* HERO CONTAINER */
+/* ================= IFC HERO CAROUSEL ================= */
 .hero-carousel {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
   height: 625px;
-  background-color: #FFC857;
+  background-color: #EEDFCC; /* professional beige-y color */
   overflow: hidden;
 }
+
 /* LEFT SIDE - vertical text */
 .hero-left-text {
   writing-mode: vertical-rl; /* vertical text going down */
-  width: 260px;
+  width: 200px; /* same width for both sides */
+  height: 90%; /* matches right panel height */
   color: #fff;
-  font-weight: 900;
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-  padding: 1.5rem;
+  font-weight: 700;
+  font-size: clamp(2rem, 3vw, 2.5rem); /* reduced for fit */
+  text-shadow: 1.5px 1.5px 5px rgba(0,0,0,0.7);
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1.2;
-  text-align: left;
-  background-color: rgba(0,0,0,0.5); /* solid semi-transparent color */
+  text-align: center;
+  background-color: rgba(35, 70, 120, 0.7); /* professional muted blue */
   border-radius: 5px;
+  flex-shrink: 0;
 }
 
 /* RIGHT SIDE - vertical text */
 .hero-right-text {
   writing-mode: vertical-rl;
-  width: 260px;
+  width: 200px; /* same as left */
+  height: 90%;
   color: #fff;
-  font-weight: 900;
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-  padding: 1.5rem;
+  font-weight: 700;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  text-shadow: 1.5px 1.5px 5px rgba(0,0,0,0.7);
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1.2;
-  text-align: right;
-  background-color: rgba(0,0,0,0.5); /* solid semi-transparent color */
+  text-align: center;
+  background-color: rgba(35, 70, 120, 0.7);
   border-radius: 5px;
+  flex-shrink: 0;
 }
 
 /* Carousel images in the center */
@@ -119,7 +99,8 @@ header {
   opacity: 1;
   position: relative;
 }
-/* DOTS (FIXED CLICK ISSUE) */
+
+/* DOTS NAVIGATION */
 .carousel-dots {
   position: absolute;
   bottom: 15px;
@@ -170,14 +151,15 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 768px) {
   .hero-carousel {
     height: 450px;
   }
 
-  .hero-left-text, .hero-right-text {
-    display: none; /* cleaner mobile look */
+  .hero-left-text,
+  .hero-right-text {
+    display: none; /* hide side text on mobile */
   }
 
   .favorites {
