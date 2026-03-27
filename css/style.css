@@ -61,40 +61,52 @@ header {
   overflow: hidden;
 }
 
-/* LEFT SIDE */
+/* LEFT SIDE - vertical text */
 .hero-left-text {
-  writing-mode: vertical-lr;  /* vertical top-to-bottom */
-  transform: none;            /* remove sideways rotation */
+  writing-mode: vertical-rl; /* vertical text going down */
+  /* transform: rotate(180deg); <-- removed */
+  width: 260px;
+  color: #fff;
   font-weight: 900;
   font-size: clamp(2.5rem, 4vw, 3.5rem);
-  color: #fff;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
   padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1.2;
   position: relative;
-  z-index: 5;
-  text-align: center;
+  overflow: hidden;
+  text-align: left;
 }
 
-/* RIGHT SIDE */
+/* RIGHT SIDE - vertical text */
 .hero-right-text {
-  writing-mode: vertical-lr;  /* vertical top-to-bottom */
-  transform: none;            /* remove rotation */
+  writing-mode: vertical-rl;
+  width: 260px;
+  color: #fff;
   font-weight: 900;
   font-size: clamp(2.5rem, 4vw, 3.5rem);
-  color: #fff;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
   padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1.2;
   position: relative;
-  z-index: 5;
-  text-align: center;
+  overflow: hidden;
+  text-align: right;
 }
 
+/* FADE BACKGROUND OVERLAY */
+.hero-left-text::before,
+.hero-right-text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* subtle black overlay */
+  z-index: -1;
+}
 /* Vertical styling */
 .hero-left-text {
   writing-mode: vertical-rl;
