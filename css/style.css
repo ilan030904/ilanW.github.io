@@ -92,15 +92,15 @@ header {
   max-height: 100%;
   object-fit: contain;
   opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: absolute; /* keep all images stacked */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* center perfectly */
   transition: opacity 1s ease-in-out;
 }
 
 .hero-carousel-images img.active {
-  opacity: 1;
-  position: relative;
+  opacity: 1; /* fade in over top */
 }
 
 /* Carousel dots */
