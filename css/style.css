@@ -73,7 +73,7 @@ header {
 /* Left vertical text */
 .hero-left-text {
   position: absolute;
-  left: 15px;              /* hug the image */
+  left: 25px;              /* hug the image */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -94,7 +94,7 @@ header {
 /* Right vertical text */
 .hero-right-text {
   position: absolute;
-  right: 10px;
+  right: 25px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
