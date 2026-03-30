@@ -79,7 +79,42 @@
   </div>
 </section>
   
+<style>
+  .favorites {
+    display: flex;               /* align cards in a row */
+    flex-wrap: wrap;             /* allow wrapping to next line */
+    gap: 20px;                   /* space between cards */
+    justify-content: center;     /* center rows horizontally */
+  }
 
+  .favorites .favorite-card {
+    flex: 1 1 calc(33.333% - 20px); /* 3 cards per row minus gap */
+    box-sizing: border-box;          /* include padding/gap in width */
+    min-width: 250px;                /* prevent cards from getting too small */
+    display: flex;                   /* make card a flex container */
+    flex-direction: column;          /* stack image and text vertically */
+  }
+
+  .favorites .favorite-card img {
+    width: 100%;                     /* image takes full card width */
+    height: 200px;                   /* fixed height for all images */
+    object-fit: cover;               /* crop/scale images nicely */
+    margin-bottom: 10px;             /* space between image and text */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 800px) {
+    .favorites .favorite-card {
+      flex: 1 1 calc(50% - 20px);   /* 2 cards per row on smaller screens */
+    }
+  }
+
+  @media (max-width: 500px) {
+    .favorites .favorite-card {
+      flex: 1 1 100%;                /* 1 card per row on very small screens */
+    }
+  }
+</style>
 
   
 <section style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
