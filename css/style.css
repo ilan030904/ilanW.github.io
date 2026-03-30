@@ -261,3 +261,9 @@ footer {
     font-size: 0.8rem;
   }
 }
+/* Hide images on mobile for main page only */
+@media (max-width: 768px) {
+  body.home img {
+    display: none;
+  }
+}
