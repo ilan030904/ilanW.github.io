@@ -199,11 +199,11 @@ header {
 
 /* ================= FOOTER ================= */
 footer {
-  width: 100%;
-  box-sizing: border-box; /* ensures padding doesn’t shrink it */
-  text-align: center;
+  width: 100vw;       /* full viewport width */
+  margin: 0;          /* remove default margin */
   padding: 1rem;
-  font-size: 0.9rem;
+  box-sizing: border-box;
+  text-align: center;
   background-color: #e35d02;
   color: #fff;
 }
