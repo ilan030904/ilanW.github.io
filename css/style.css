@@ -49,6 +49,14 @@ header {
   font-style: italic;
 }
 
+.hero-content h1.hero-name {
+  font-family: 'Great Vibes', cursive; /* cursive font */
+  font-size: clamp(3rem, 7vw, 6rem);  /* bigger, responsive size */
+  color: #e35d02;                     /* orange color */
+  text-align: center;                  /* center the text */
+  margin: 0 0 1rem 0;                  /* spacing below */
+}
+
 /* ================= IFC HERO CAROUSEL ================= */
 .hero-carousel {
   position: relative;
