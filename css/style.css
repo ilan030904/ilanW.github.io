@@ -199,13 +199,16 @@ header {
 
 /* ================= FOOTER ================= */
 footer {
-  width: 100vw;       /* full viewport width */
-  margin: 0;          /* remove default margin */
+  width: 100vw;              /* full viewport width */
+  position: relative;         /* allow shifting */
+  left: 50%;                 /* move left edge to 50% of viewport */
+  transform: translateX(-50%); /* pull it back half of its width */
+  margin: 0;
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
   background-color: #e35d02;
-  color: #fff;
+  color: white;
 }
 /* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 768px) {
