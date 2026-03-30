@@ -191,13 +191,14 @@ header {
 
 /* ================= FOOTER ================= */
 footer {
+  width: 100%;
+  box-sizing: border-box; /* ensures padding doesn’t shrink it */
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
   background-color: #e35d02;
   color: #fff;
 }
-
 /* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 768px) {
   /* Hide side text on smaller screens */
