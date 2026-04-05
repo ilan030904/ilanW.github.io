@@ -5,6 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Consortium Ethics Program (CEP)</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Default desktop layout */
+    .content-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: nowrap;
+    }
+
+    .left-block {
+      display: flex;
+      align-items: stretch;
+      gap: 30px;
+    }
+
+    .left-text {
+      width: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .right-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .right-caption {
+      margin-top: 10px;
+      text-align: right;
+      max-width: 400px;
+    }
+
+    .desktop-img {
+      border: 1px solid #ccc;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .content-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .left-block, .right-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .left-text, .right-caption {
+        width: 100%;
+        text-align: center;
+        max-width: 90%;
+      }
+
+      .desktop-img {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body style="margin:0; padding:0;">
 
@@ -15,55 +81,50 @@
 </header>
 
 <main style="padding: 20px; max-width: 900px; margin: auto;">
+  <center>
+    <h1 style="text-align: center; margin-bottom: 40px; border-bottom: 3px solid #e35d02; display: inline-block; padding-bottom: 10px; letter-spacing: 3px;">
+      Consortium Ethics Program (CEP)
+    </h1>
+  </center>
 
-<center><h1 style="text-align: center; margin-bottom: 40px; border-bottom: 3px solid #e35d02; display: inline-block; padding-bottom: 10px; letter-spacing: 3px;">
-  Consortium Ethics Program (CEP)</h1></Center>
+  <!-- Content Block -->
+  <div class="content-block">
+    <!-- LEFT IMAGE BLOCK -->
+    <div class="left-block">
+      <div class="left-text">
+        <p>
+          This flyer uses a clean, modern layout to balance professionalism with emotional impact. Key info is organized with bold headers and clear sections, making it easy to scan. A deep blue sidebar adds contrast, while speaker photos personalize the content. The mix of fonts, color blocking, and white space enhances readability while maintaining a creative, engaging look.
+        </p>
+      </div>
+      <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/ca2eedf2863926aec03440a53450c7e134debc2a/Screenshot%202026-03-30%20163423.png"
+           alt="CEP Screenshot"
+           class="desktop-img"
+           style="width:350px; height:auto;">
+    </div>
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; margin-bottom: 40px;">
-
-  <!-- LEFT IMAGE BLOCK -->
-<div style="display: flex; align-items: stretch; gap: 30px;">
-
-  <!-- LEFT TEXT -->
-  <div style="width: 150px; display: flex; flex-direction: column; justify-content: space-between;">
-    <p style="margin: 0;">
-   This flyer uses a clean, modern layout to balance professionalism with emotional impact. Key info is organized with bold headers and clear sections, making it easy to scan. A deep blue sidebar adds contrast, while speaker photos personalize the content. The mix of fonts, color blocking, and white space enhances readability while maintaining a creative, engaging look.
-    </p>
-  </div>
-
-  <!-- Image -->
-  <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/ca2eedf2863926aec03440a53450c7e134debc2a/Screenshot%202026-03-30%20163423.png"
-       alt="CEP Screenshot"
-       style="width: 350px; height: auto; border: 1px solid #ccc;">
-
-</div>
-
-  <!-- RIGHT IMAGE BLOCK -->
-  <div style="display: flex; flex-direction: column; align-items: flex-end;">
-    <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/e60fc36b8174dc9107fffbbcfb7680e468201f11/CEP.png"
-         alt="CEP logo"
-         style="width: 380px; height: auto; border: 1px solid #ccc;">
-    <div style="margin-top: 10px; text-align: right; max-width: 400px;">
-      Launched a refreshed LinkedIn presence featuring a bold new logo to elevate branding and visibility.
+    <!-- RIGHT IMAGE BLOCK -->
+    <div class="right-block">
+      <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/e60fc36b8174dc9107fffbbcfb7680e468201f11/CEP.png"
+           alt="CEP logo"
+           class="desktop-img"
+           style="width:380px; height:auto;">
+      <div class="right-caption">
+        Launched a refreshed LinkedIn presence featuring a bold new logo to elevate branding and visibility.
+      </div>
     </div>
   </div>
 
-</div>
-
-
-  
   <!-- Paragraph below -->
   <div style="font-size: 18px; line-height: 1.6;">
     <p>
-I designed marketing materials and digital content campaigns to promote program initiatives, while also developing and launching a LinkedIn marketing strategy that strengthened brand presence and drove growth. In addition, I crafted targeted messaging and branding to attract and retain new members, ensuring consistent engagement and a clear program identity.    </p>
+      I designed marketing materials and digital content campaigns to promote program initiatives, while also developing and launching a LinkedIn marketing strategy that strengthened brand presence and drove growth. In addition, I crafted targeted messaging and branding to attract and retain new members, ensuring consistent engagement and a clear program identity.
+    </p>
   </div>
-
 </main>
 
-</body>
-
-
-  <footer style="width:100vw; margin:0; padding:1rem; background-color:#e35d02; color:white; text-align:center;">
+<footer style="width:100vw; margin:0; padding:1rem; background-color:#e35d02; color:white; text-align:center;">
   <p>Connect with me on <a href="https://www.linkedin.com/in/ilan-weiner" style="color:white;">LinkedIn</a></p>
 </footer>
+
+</body>
 </html>
