@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ilan Studio</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Mobile stacking */
+    @media (max-width: 768px) {
+      div[style*="justify-content: space-between"] {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      div[style*="align-items: flex-start; gap: 15px;"] {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      div[style*="flex-direction: column; gap: 8px; max-width:"] {
+        max-width: 100% !important;
+        text-align: center;
+      }
+      img {
+        width: 90% !important;
+        max-width: 300px;
+        height: auto !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
