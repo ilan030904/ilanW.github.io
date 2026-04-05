@@ -102,26 +102,61 @@
 
   </div>
 </section>
+ <section style="display: flex; flex-wrap: wrap; gap: 20px; padding: 20px; align-items: flex-start;">
   
-    <center><h2><strong>SKILLS & EXPERTISE</strong></h2></center>
-     <div style="display: flex; justify-content: center; gap: 50px;">
-    <ul>
-      <li>Graphic Design</li>
-      <li>Painting</li>
-      <li>Canva</li>
-      <li>Adobe Suite</li>
-      <li>Microsoft Office 365</li>
-      <li>Website Design</li>
-    </ul>
-    <ul>
-      <li>Teamwork</li>
-      <li>Creating Promotional Materials</li>
-      <li>Public Speaking</li>
-      <li>Photography</li>
-      <li>Adaptability</li>
-    </ul>
+  <!-- Skills Side -->
+  <div style="flex: 1 1 300px;">
+    <h2 style="text-align: left;"><strong>Skills & Expertise</strong></h2>
+    <div style="display: flex; gap: 50px;">
+      <ul>
+        <li>Graphic Design</li>
+        <li>Painting</li>
+        <li>Canva</li>
+        <li>Adobe Suite</li>
+        <li>Microsoft Office 365</li>
+        <li>Website Design</li>
+      </ul>
+      <ul>
+        <li>Teamwork</li>
+        <li>Creating Promotional Materials</li>
+        <li>Public Speaking</li>
+        <li>Photography</li>
+        <li>Adaptability</li>
+      </ul>
+    </div>
   </div>
-  </section>
+
+  <!-- Photography Side -->
+  <div style="flex: 1 1 300px; text-align: center;">
+    <h2><strong>Photography</strong></h2>
+    <div class="carousel" style="position: relative; width: 100%; max-width: 300px; margin: auto;">
+      <img src="photos/photo1.jpg" alt="Photo 1" class="carousel-photo" style="width: 100%; height: 180px; object-fit: cover; border-radius: 10px;">
+      <img src="photos/photo2.jpg" alt="Photo 2" class="carousel-photo" style="width: 100%; height: 180px; object-fit: cover; border-radius: 10px;">
+      <img src="photos/photo3.jpg" alt="Photo 3" class="carousel-photo" style="width: 100%; height: 180px; object-fit: cover; border-radius: 10px;">
+    </div>
+    <a href="photos.html" style="display: inline-block; margin-top: 10px; padding: 8px 15px; background-color: #0077b6; color: white; border-radius: 5px; text-decoration: none;">Show More</a>
+  </div>
+
+</section>
+
+<script>
+  // Simple carousel rotation
+  let currentIndex = 0;
+  const photos = document.querySelectorAll('.carousel-photo');
+
+  function showPhoto(index) {
+    photos.forEach((photo, i) => {
+      photo.style.display = i === index ? 'block' : 'none';
+    });
+  }
+
+  showPhoto(currentIndex);
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % photos.length;
+    showPhoto(currentIndex);
+  }, 3000);
+</script>
 </main>
         
 <footer>
