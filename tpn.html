@@ -5,6 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Pitt News</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Default desktop layout */
+    .content-block {
+      display: flex;
+      flex: 1 1 500px;
+      align-items: stretch;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .content-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .content-block .caption {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .content-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .content-block .caption {
+        text-align: center;
+        width: 90%;
+        max-width: 90%;
+        align-items: flex-start;
+      }
+
+      .content-block img {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -17,88 +64,63 @@
 
   <!-- Title -->
   <h1 style="text-align: center; border-bottom: 3px solid #e35d02; display: inline-block; padding-bottom: 10px; margin: 20px auto; display:block; width:fit-content;">
-The Pitt News
+    The Pitt News
   </h1>
 
-<section style="display: flex; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 20px auto;">
-
-  <!-- First Image + Caption -->
-  <div style="display: flex; flex: 1 1 500px; align-items: stretch; gap: 20px;">
-    <div style="flex: 1;">
-      <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/40141116a4a9651cc5c117142c6db9fa18bfb07a/pitt%20day%20of%20giving%20pop%20up.png" 
-           alt="Pitt Day of Giving Pop-up"
-           style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
-    </div>
-    <div style="flex: 1; display: flex; align-items: center;">
-      <p style="margin: 0; font-size: 1rem; line-height: 1.4;">
+  <!-- First Section -->
+  <section style="display: flex; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 20px auto;">
+    <!-- First Image + Caption -->
+    <div class="content-block">
+      <div>
+        <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/40141116a4a9651cc5c117142c6db9fa18bfb07a/pitt%20day%20of%20giving%20pop%20up.png" 
+             alt="Pitt Day of Giving Pop-up">
+      </div>
+      <p class="caption">
         Pop-up ad for Pitt Day of Giving with baby blue and gold squiggly lines over a Pitt Blue background, with the Pitt Day of Giving logo on the right. A creative look to grab your attention!
       </p>
     </div>
-  </div>
 
-  <!-- Second Image + Caption -->
-  <div style="display: flex; flex: 1 1 500px; align-items: stretch; gap: 20px;">
-    <div style="flex: 1;">
-      <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/4e27ef38abdf81a124f769572e1af7c3574a372c/pitt%20day%20of%20giving%20pop%20up%20(1).png" 
-           alt="Pitt Day of Giving Pop-up Variation"
-           style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
-    </div>
-    <div style="flex: 1; display: flex; align-items: center;">
-      <p style="margin: 0; font-size: 1rem; line-height: 1.4;">
+    <!-- Second Image + Caption -->
+    <div class="content-block">
+      <div>
+        <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/4e27ef38abdf81a124f769572e1af7c3574a372c/pitt%20day%20of%20giving%20pop%20up%20(1).png" 
+             alt="Pitt Day of Giving Pop-up Variation">
+      </div>
+      <p class="caption">
         A different variation of the Pitt Day of Giving pop-up. The logo is inside a variation of a triangle on the left, Pitt Blue background on the right, and iconic Pitt patterns decorating campus buildings and signage across campus.
       </p>
     </div>
-  </div>
+  </section>
 
-</section>
-
+  <!-- Second Section -->
   <section style="display: flex; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 20px auto;">
-
-  <!-- First Block -->
-  <div style="display: flex; flex: 1 1 500px; align-items: stretch; gap: 20px;">
-    
-    <!-- Caption LEFT -->
-    <div style="flex: 1; display: flex; align-items: center;">
-      <p style="margin: 0; line-height: 1.4;">
+    <!-- First Block -->
+    <div class="content-block">
+      <p class="caption">
         Designed a visually engaging flyer for the readership survey, featuring a newspaper background that ties directly to The Pitt News. Chose a font and color palette that complemented the design, giving the piece a classic, old-fashioned newspaper feel while remaining modern and readable.
       </p>
+      <div>
+        <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/bf6b8c3e27baa3ee384c86c662cbbec72a595cdc/Readership%20survey%20instagram%20story.png"
+             alt="Readership Survey">
+      </div>
     </div>
 
-    <!-- Image RIGHT -->
-    <div style="flex: 1;">
-      <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/bf6b8c3e27baa3ee384c86c662cbbec72a595cdc/Readership%20survey%20instagram%20story.png"
-           alt="Readership Survey"
-           style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
-    </div>
-
-  </div>
-
-  <!-- Second Block -->
-  <div style="display: flex; flex: 1 1 500px; align-items: stretch; gap: 20px;">
-    
-    <!-- Caption LEFT -->
-    <div style="flex: 1; display: flex; align-items: center;">
-      <p style="margin: 0; line-height: 1.4;">
+    <!-- Second Block -->
+    <div class="content-block">
+      <p class="caption">
         Created a fun Olympics-themed activity sheet featuring a dynamic snowboard background with the iconic Olympic rings and incorporated the 2026 Winter Olympics mascots, Tina and Milo, to make it engaging and visually exciting while educating viewers on the unique mascots.
       </p>
+      <div>
+        <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/bf6b8c3e27baa3ee384c86c662cbbec72a595cdc/Screenshot%202026-04-01%20141913.png"
+             alt="Olympics Activity Sheet">
+      </div>
     </div>
+  </section>
 
-    <!-- Image RIGHT -->
-    <div style="flex: 1;">
-      <img src="https://raw.githubusercontent.com/ilan030904/ilanW.github.io/bf6b8c3e27baa3ee384c86c662cbbec72a595cdc/Screenshot%202026-04-01%20141913.png"
-           alt="Olympics Activity Sheet"
-           style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
-    </div>
-
-  </div>
-
-</section>
-
-
-
-    <!-- Footer -->
+  <!-- Footer -->
   <footer style="width:100%; padding:1rem; background-color:#e35d02; color:white; text-align:center;">
     <p>Connect with me on <a href="https://www.linkedin.com/in/ilan-weiner" style="color:white;">LinkedIn</a></p>
   </footer>
 
-  
+</body>
+</html>
