@@ -86,7 +86,62 @@
     </div>
 
   </section>
+<!-- Video Editing Section Title -->
+<center>
+  <h2 style="text-align: center; border-bottom: 3px solid #e35d02; display: inline-block; padding-bottom: 10px; margin: 40px auto 20px auto; letter-spacing: 2px;">
+    Video Editing
+  </h2>
+</center>
 
+<!-- Video Section -->
+<section style="display: flex; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 20px auto;">
+
+  <!-- Left Video (Caption on LEFT) -->
+  <div class="video-block" style="display: flex; flex: 1 1 500px; align-items: flex-start; gap: 20px;">
+    
+    <p style="flex:1; margin: 0; line-height: 1.4;">
+Each participant was recorded individually, and the video was carefully edited to ensure a smooth, cohesive flow. Subtle background music was added during quieter moments, allowing each question to transition naturally from one person to the next, creating an engaging and easy-to-follow viewing experience    </p>
+
+    <div style="flex:1;">
+      <video controls preload="metadata" style="width: 100%; border-radius: 10px;">
+        <source src="VIDEO_LINK_1_HERE.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <!-- Right Video (Caption on RIGHT) -->
+  <div class="video-block" style="display: flex; flex: 1 1 500px; align-items: flex-start; gap: 20px;">
+    
+    <div style="flex:1;">
+      <video controls preload="metadata" style="width: 100%; border-radius: 10px;">
+        <source src="VIDEO_LINK_2_HERE.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <p style="flex:1; margin: 0; line-height: 1.4;">
+Filmed and edited this concept video for the NFL Draft coming to Pittsburgh. Each person was filmed separately and brought together in post to create one seamless, cohesive final cut. The energy around this city and this event is unreal, and I wanted to capture that excitement in every frame. Full production from filming to final edit, all done by me.    </p>
+
+  </div>
+
+</section>
+
+<!-- Mobile Styling -->
+<style>
+  @media (max-width: 768px) {
+    .video-block {
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+    .video-block p {
+      text-align: center !important;
+      width: 90% !important;
+    }
+    .video-block video {
+      width: 90% !important;
+    }
+  }
+</style>
   <!-- Footer -->
   <footer style="width:100%; padding:1rem; background-color:#e35d02; color:white; text-align:center;">
     <p>Connect with me on <a href="https://www.linkedin.com/in/ilan-weiner" style="color:white;">LinkedIn</a></p>
