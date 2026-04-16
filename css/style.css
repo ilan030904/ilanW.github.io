@@ -11,6 +11,12 @@ img {
   display: block;
 }
 
+/* ================= VARIABLES ================= */
+:root {
+  --navbar-h: 55px;
+  --ribbon-h: 35px;
+}
+
 /* ================= BODY ================= */
 body {
   font-family: Arial, sans-serif;
@@ -18,7 +24,6 @@ body {
   background: #F5F5DC;
   color: #333;
 
-  padding-top: 100px; /* navbar + ribbon space */
   overflow-x: hidden;
 }
 
@@ -28,7 +33,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 55px;
+  height: var(--navbar-h);
 
   background-color: navy;
 
@@ -61,9 +66,10 @@ body {
 /* ================= ORANGE RIBBON ================= */
 header {
   position: fixed;
-  top: 55px;
+  top: var(--navbar-h);
   left: 0;
   width: 100%;
+  height: var(--ribbon-h);
 
   background: #e35d02;
   color: #fff;
@@ -72,7 +78,7 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  padding: 0.3rem 1rem;
+  padding: 0 1rem;
   font-size: 0.9rem;
 
   z-index: 999;
@@ -81,9 +87,18 @@ header {
 .header-left,
 .header-center,
 .header-right {
-  margin: 0;
-  padding: 0;
   white-space: nowrap;
+}
+
+/* ================= PAGE WRAPPER (CRITICAL FIX) ================= */
+main {
+  padding-top: calc(var(--navbar-h) + var(--ribbon-h));
+}
+
+/* ================= TYPOGRAPHY SAFETY ================= */
+h1, h2, h3, p {
+  position: relative;
+  z-index: 1;
 }
 
 /* ================= HERO ================= */
@@ -116,34 +131,25 @@ header {
 /* ================= CAROUSEL ================= */
 .hero-carousel {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   width: 100%;
   height: 625px;
-
-  background-color: #FFC857;
   overflow: hidden;
+  background-color: #FFC857;
 }
 
 .hero-carousel-images-wrapper {
   position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 100%;
-  height: 100%;
 }
 
 .hero-carousel-images {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-carousel-images img {
@@ -172,7 +178,7 @@ header {
   transform: translateY(-50%);
   width: 140px;
 
-  color: #fff;
+  color: white;
   font-weight: 900;
   font-size: clamp(1.2rem, 2vw, 2rem);
   text-align: center;
@@ -194,7 +200,6 @@ header {
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-
   display: flex;
   gap: 10px;
 }
@@ -214,12 +219,9 @@ header {
 
 /* ================= FAVORITES ================= */
 .favorites {
-  background-color: #F5F5DC;
-
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-
   padding: 2rem;
   gap: 2rem;
 }
@@ -230,7 +232,6 @@ header {
 }
 
 .favorite-card img {
-  width: 100%;
   border-radius: 10px;
 }
 
@@ -242,19 +243,13 @@ header {
 footer {
   width: 100%;
   text-align: center;
-
   background-color: #e35d02;
   color: white;
-
   padding: 1rem;
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-
-  body {
-    padding-top: 90px;
-  }
 
   .hero-left-text,
   .hero-right-text {
