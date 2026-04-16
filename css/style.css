@@ -1,43 +1,50 @@
-/* ================= BASIC STYLING ================= */
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================= BODY ================= */
 body {
   font-family: Arial, sans-serif;
-    margin: 0;
-  padding-top: 55px; /* matches navbar height */
   line-height: 1.6;
   background: #F5F5DC;
   color: #333;
+
+  padding-top: 100px; /* navbar + ribbon space */
+  overflow-x: hidden;
 }
 
+/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  box-sizing: border-box;
+  height: 55px;
 
   background-color: navy;
-  height: 55px
-  padding: 0px 15px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;   /* KEY FIX */
+
+  padding: 0 15px;
 
   z-index: 1000;
 }
- 
+
 .nav-links {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
 }
 
 .navbar a {
@@ -51,53 +58,46 @@ body {
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-}
-
-/* ================= HEADER ================= */
+/* ================= ORANGE RIBBON ================= */
 header {
+  position: fixed;
+  top: 55px;
+  left: 0;
+  width: 100%;
+
+  background: #e35d02;
+  color: #fff;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #e35d02;
-  color: #fff;
+
   padding: 0.3rem 1rem;
   font-size: 0.9rem;
-  width: 100%;
-  box-sizing: border-box;
+
+  z-index: 999;
 }
 
-.header-left, .header-center, .header-right {
+.header-left,
+.header-center,
+.header-right {
   margin: 0;
   padding: 0;
   white-space: nowrap;
 }
 
-/* ================= MAIN PAGE HERO ================= */
+/* ================= HERO ================= */
 .hero {
   background-color: #FFC857;
   color: #000;
   text-align: center;
-  padding: 8rem 2rem;
+  padding: 6rem 2rem;
 }
 
 .hero-content h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: clamp(2.5rem, 5vw, 4rem); /* responsive font size */
-  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   color: #e35d02;
-  text-align: center;
 }
 
 .hero-content p {
@@ -107,135 +107,119 @@ header {
 }
 
 .hero-content h1.hero-name {
-  font-family: 'Great Vibes', cursive; /* cursive font */
-  font-size: clamp(4rem, 8vw, 7rem);  /* bigger, responsive size */
-  color: #e35d02;                     /* orange color */
-  text-align: center;                  /* center the text */
-  margin: 0 0 1rem 0;                  /* spacing below */
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(4rem, 8vw, 7rem);
+  color: #e35d02;
+  margin-bottom: 1rem;
 }
 
-/* ================= IFC HERO CAROUSEL ================= */
+/* ================= CAROUSEL ================= */
 .hero-carousel {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 100%;
   height: 625px;
+
   background-color: #FFC857;
   overflow: hidden;
 }
 
-/* Wrapper around images + left text */
 .hero-carousel-images-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 100%;
   height: 100%;
 }
 
-/* Left vertical text */
-.hero-left-text {
-  position: absolute;
-  left: 120px;              /* hug the image */
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 140px;
-  color: #fff;
-  font-weight: 900;
-  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-  text-align: center;
-  line-height: 1.2;
-  white-space: normal;
-  z-index: 5;
-}
-
-/* Right vertical text */
-.hero-right-text {
-  position: absolute;
-  right: 120px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 140px;
-  color: #fff;
-  font-weight: 900;
-  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-  text-align: center;
-  line-height: 1.2;
-  white-space: normal;
-  z-index: 5;
-}
-
-/* Carousel images */
 .hero-carousel-images {
   flex: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100%;
+  align-items: center;
+
   position: relative;
 }
 
 .hero-carousel-images img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+  opacity: 0;
   transition: opacity 1s ease-in-out;
-  z-index: 1;
 }
 
 .hero-carousel-images img.active {
   opacity: 1;
-  z-index: 2;
 }
 
-/* Carousel dots */
+/* side text */
+.hero-left-text,
+.hero-right-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 140px;
+
+  color: #fff;
+  font-weight: 900;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  text-align: center;
+
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+.hero-left-text {
+  left: 120px;
+}
+
+.hero-right-text {
+  right: 120px;
+}
+
+/* dots */
 .carousel-dots {
   position: absolute;
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
+
   display: flex;
   gap: 10px;
-  z-index: 10;
 }
 
 .carousel-dots span {
   width: 12px;
   height: 12px;
-  background-color: rgba(255,255,255,0.5);
   border-radius: 50%;
+  background: rgba(255,255,255,0.5);
   cursor: pointer;
 }
 
 .carousel-dots .active {
-  background-color: #fff;
+  background: white;
   transform: scale(1.3);
 }
 
-/* ================= FAVORITES SECTION ================= */
+/* ================= FAVORITES ================= */
 .favorites {
   background-color: #F5F5DC;
+
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+
   padding: 2rem;
   gap: 2rem;
 }
@@ -256,61 +240,41 @@ header {
 
 /* ================= FOOTER ================= */
 footer {
-  width: 100vw;              /* full viewport width */
-  position: relative;         /* allow shifting */
-  left: 50%;                 /* move left edge to 50% of viewport */
-  transform: translateX(-50%); /* pull it back half of its width */
-  margin: 0;
-  padding: 1rem;
-  box-sizing: border-box;
+  width: 100%;
   text-align: center;
+
   background-color: #e35d02;
   color: white;
+
+  padding: 1rem;
 }
-/* ================= MOBILE RESPONSIVE ================= */
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  /* Hide side text on smaller screens */
+
+  body {
+    padding-top: 90px;
+  }
+
   .hero-left-text,
   .hero-right-text {
     display: none;
   }
 
-  /* Reduce carousel height */
   .hero-carousel {
     height: 400px;
   }
 
-  /* Favorites stack vertically */
   .favorites {
     flex-direction: column;
     align-items: center;
   }
-
-  /* Smaller carousel dots */
-  .carousel-dots span {
-    width: 10px;
-    height: 10px;
-  }
 }
 
 @media (max-width: 600px) {
-  body {
-    font-size: 14px;
-    padding: 1rem;
-  }
-
-  header {
-    flex-direction: column;
-    text-align: center;
-    font-size: 0.7rem;
-  }
 
   .hero {
     padding: 4rem 1rem;
-  }
-
-  .hero-content h1 {
-    font-size: 2.5rem;
   }
 
   .hero-content p {
@@ -319,11 +283,5 @@ footer {
 
   footer {
     font-size: 0.8rem;
-  }
-}
-/* Hide images on mobile for main page only */
-@media (max-width: 768px) {
-  body.home img {
-    display: none;
   }
 }
