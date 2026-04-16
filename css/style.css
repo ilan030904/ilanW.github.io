@@ -14,11 +14,12 @@ body {
   left: 0;
   width: 100%;
   background-color: navy;
-  padding: 15px 30px;
+  padding: 8px 20px;   /* smaller height */
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  flex-wrap: wrap;      /* IMPORTANT FIX */
 }
 
 .navbar a {
@@ -31,7 +32,11 @@ body {
 .navbar a:hover {
   text-decoration: underline;
 }
-
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
