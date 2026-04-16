@@ -1,4 +1,8 @@
 /* ================= BASIC STYLING ================= */
+
+body {
+  margin-top: 80px;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
