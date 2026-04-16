@@ -14,7 +14,7 @@ body {
   left: 0;
   width: 100%;
   background-color: navy;
-  padding: 8px 20px;   /* smaller height */
+  padding: 6px 20px;   /* smaller height */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,6 +27,10 @@ body {
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
+}
+
+.navbar a {
+  font-size: 12px;
 }
 
 .navbar a:hover {
