@@ -21,6 +21,11 @@ header {
   width: 100%;
   box-sizing: border-box;
 }
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 .header-left,
 .header-center,
