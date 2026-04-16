@@ -24,7 +24,7 @@ header {
 header a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .header-left,
