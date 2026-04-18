@@ -219,6 +219,54 @@ footer {
   color: white;
 }
 
+
+/* Reset default spacing */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: navy;
+  padding: 12px 30px;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* LOGO (left side) */
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logo i {
+  margin-right: 8px;
+}
+
+/* NAV LINKS (right side) */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+/* HOVER EFFECT */
+.nav-links a:hover {
+  color: orange;
+}
+
 /* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 768px) {
   /* Hide side text on smaller screens */
